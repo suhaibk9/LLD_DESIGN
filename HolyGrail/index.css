@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.holy {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  min-width: 100%;
+  background-color: red;
+  min-height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  min-height: 60%;
+}
+.container .leftSide {
+  min-width: 25%;
+  background-color: aqua;
+}
+.container .mainContainer {
+  min-width: 50%;
+  background-color: darkblue;
+}
+.container .rightSide {
+  min-width: 25%;
+  background-color: aqua;
+}
+footer {
+  min-width: 100%;
+  min-height: 20%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
