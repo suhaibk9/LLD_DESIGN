@@ -1,0 +1,19 @@
+.accordion-content {
+  display: none;
+}
+.accordion-content.active {
+  display: block;
+}
+.accordion {
+  border: 1px solid red;
+}
+.accordion-item {
+  padding: 10px;
+  border: 1px solid green;
+}
+.accordion-item.active {
+  background-color: green;
+}
+.accordion-item.active .accordion-header {
+  border-bottom: 2px solid red;
+}
