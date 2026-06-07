@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.carousel-container {
+  height: 50vh;
+  width: 40vw;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.image-container {
+  display: flex;
+  height: 100%;
+}
+.image {
+  min-width: 0;
+  height: 100%;
+  object-fit: cover;
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-10%);
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
