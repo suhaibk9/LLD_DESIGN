@@ -1,0 +1,27 @@
+.game {
+  max-width: calc(var(--board-size) * 100px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+.status {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: large;
+  outline: none;
+  border: 3px solid black;
+  background-color: azure;
+}
+  
