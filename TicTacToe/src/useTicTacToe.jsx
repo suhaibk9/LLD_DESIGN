@@ -15,19 +15,14 @@ const generateWiningPattern = (n) => {
     patterns.push(horizontalPattern);
     patterns.push(verticalPattern);
   }
-  //Right Diagonal 0 5 10 15
-  //i*n+i
+  //Diagonal
   const leftDiagonal = [];
-  for (let i = 0; i < n; i++) {
-    leftDiagonal.push(i * n + i);
-  }
-  //Right Diagonal 0 3 6 9 12
-  //i*n-i
   const rightDiagonal = [];
   for (let i = 0; i < n; i++) {
-    // rightDiagonal.push(i * n - i);
-    rightDiagonal.push(i * n + (n - 1 - i));
+    leftDiagonal.push(i * n + i);
+    rightDiagonal.push((i + 1) * (n - 1));
   }
+
   patterns.push(leftDiagonal);
   patterns.push(rightDiagonal);
   return patterns;
