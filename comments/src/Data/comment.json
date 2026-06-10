@@ -1,0 +1,303 @@
+[
+  {
+    "id": 1,
+    "content": "This is a great article on low-level system design. I really liked the explanation on rate limiting algorithms!",
+    "votes": 12,
+    "timestamp": "2026-06-10T10:00:00Z",
+    "replies": [
+      {
+        "id": 2,
+        "content": "Agreed! Token bucket vs leaky bucket was explained very clearly. Which one do you prefer for a highly bursty traffic scenario?",
+        "votes": 5,
+        "timestamp": "2026-06-10T10:15:00Z",
+        "replies": [
+          {
+            "id": 3,
+            "content": "For bursty traffic, token bucket is usually preferred because it allows bursty requests up to the capacity of the bucket, whereas leaky bucket smooths out the traffic at a constant rate.",
+            "votes": 8,
+            "timestamp": "2026-06-10T10:30:00Z",
+            "replies": [
+              {
+                "id": 4,
+                "content": "Exactly! But keep in mind that leaky bucket guarantees a smooth output flow, which is crucial for some downstream systems that can't handle sudden spikes.",
+                "votes": 3,
+                "timestamp": "2026-06-10T10:45:00Z",
+                "replies": []
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "content": "Depends on the system requirements. If you want to prevent resource exhaustion completely, Leaky Bucket might be safer.",
+            "votes": 2,
+            "timestamp": "2026-06-10T11:00:00Z",
+            "replies": []
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "content": "I think the diagram on sliding window logs was a bit confusing. Could anyone clarify how the cleanup of old logs happens?",
+        "votes": 4,
+        "timestamp": "2026-06-10T10:20:00Z",
+        "replies": [
+          {
+            "id": 7,
+            "content": "Every time a new request comes in, we remove all timestamps from the sorted set (like Redis ZREMRANGEBYSCORE) that are older than (current_time - window_size). Then we count the remaining elements in the set.",
+            "votes": 9,
+            "timestamp": "2026-06-10T10:40:00Z",
+            "replies": [
+              {
+                "id": 8,
+                "content": "That makes perfect sense now, thank you! So it does require a database write or update for every single check.",
+                "votes": 1,
+                "timestamp": "2026-06-10T11:10:00Z",
+                "replies": [
+                  {
+                    "id": 9,
+                    "content": "Yes, which is why it can be memory-intensive and expensive if you have a lot of requests. That's why sliding window counter is a nice middle ground.",
+                    "votes": 4,
+                    "timestamp": "2026-06-10T11:30:00Z",
+                    "replies": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "content": "Can we also implement nested comments in React recursively? What is the maximum recursion depth we should be worried about?",
+    "votes": 15,
+    "timestamp": "2026-06-10T09:00:00Z",
+    "replies": [
+      {
+        "id": 11,
+        "content": "Yes, recursion in React is as simple as a component calling itself: `<Comment comment={reply} />` inside a map loop. React can easily handle depth up to hundreds of levels, but UI-wise, you might run out of indentation space after 5-7 levels.",
+        "votes": 10,
+        "timestamp": "2026-06-10T09:10:00Z",
+        "replies": [
+          {
+            "id": 12,
+            "content": "Absolutely. Usually websites like Reddit stop indenting or collapse after a certain depth and offer a 'load more/view thread' link to open a new view.",
+            "votes": 7,
+            "timestamp": "2026-06-10T09:20:00Z",
+            "replies": [
+              {
+                "id": 15,
+                "content": "Good point, Reddit style thread handling is neat. Do we have a standard library or package for this in React?",
+                "votes": 6,
+                "timestamp": "2026-06-10T09:25:00Z",
+                "replies": [
+                  {
+                    "id": 16,
+                    "content": "Usually no package is required, it's just recursion. But packages like `react-nested-comments` exist if you want pre-built UI.",
+                    "votes": 2,
+                    "timestamp": "2026-06-10T09:35:00Z",
+                    "replies": [
+                      {
+                        "id": 17,
+                        "content": "Nice! Doing it from scratch is better for LLD interviews anyway.",
+                        "votes": 4,
+                        "timestamp": "2026-06-10T09:40:00Z",
+                        "replies": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "content": "Don't forget performance! If the list is huge, you might want to look into virtualization or only rendering the visible subtree.",
+        "votes": 3,
+        "timestamp": "2026-06-10T09:30:00Z",
+        "replies": [
+          {
+            "id": 18,
+            "content": "Virtualization packages like `react-window` or `react-virtualized` work well, but integrating them with nested/collapsible tree structures can be tricky.",
+            "votes": 5,
+            "timestamp": "2026-06-10T09:45:00Z",
+            "replies": [
+              {
+                "id": 19,
+                "content": "Indeed. You typically flatten the tree first into a list of items with indentation depths metadata before virtualization.",
+                "votes": 8,
+                "timestamp": "2026-06-10T09:50:00Z",
+                "replies": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "content": "Great UI guidelines! I love the glassmorphic design system proposed. Will definitely try to implement it in my project.",
+    "votes": 18,
+    "timestamp": "2026-06-10T08:30:00Z",
+    "replies": [
+      {
+        "id": 20,
+        "content": "Glassmorphism looks great, but make sure you test readability, especially under different screen brightnesses or contrast settings.",
+        "votes": 9,
+        "timestamp": "2026-06-10T08:45:00Z",
+        "replies": [
+          {
+            "id": 21,
+            "content": "Absolutely! Adding a solid background fallback or checking contrast ratios is crucial for accessibility (WCAG).",
+            "votes": 11,
+            "timestamp": "2026-06-10T08:55:00Z",
+            "replies": [
+              {
+                "id": 22,
+                "content": "Are you using Tailwind or custom CSS for the glassmorphism effect?",
+                "votes": 2,
+                "timestamp": "2026-06-10T09:05:00Z",
+                "replies": [
+                  {
+                    "id": 23,
+                    "content": "Usually it's `backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.2);` in vanilla CSS. Both work perfectly.",
+                    "votes": 4,
+                    "timestamp": "2026-06-10T09:15:00Z",
+                    "replies": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "content": "What's the best strategy to handle state management for nested comments in a vanilla JS implementation?",
+    "votes": 7,
+    "timestamp": "2026-06-10T07:45:00Z",
+    "replies": [
+      {
+        "id": 25,
+        "content": "For Vanilla JS, using a normalized state object (flat map/dictionary) where comments are indexed by their ID is extremely helpful. That way, updates, upvotes, or deletes are O(1) operations.",
+        "votes": 14,
+        "timestamp": "2026-06-10T08:00:00Z",
+        "replies": [
+          {
+            "id": 26,
+            "content": "Exactly. Trying to traverse a deep recursive tree directly in JS for an update is O(N) and error-prone.",
+            "votes": 5,
+            "timestamp": "2026-06-10T08:10:00Z",
+            "replies": [
+              {
+                "id": 27,
+                "content": "Also makes it easy to serialize/deserialize and save to localStorage!",
+                "votes": 3,
+                "timestamp": "2026-06-10T08:15:00Z",
+                "replies": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "content": "You can also use custom events to pass data updates back to the root component.",
+        "votes": 4,
+        "timestamp": "2026-06-10T08:05:00Z",
+        "replies": [
+          {
+            "id": 29,
+            "content": "Yes! Event delegation on the root comments container is key for memory efficiency.",
+            "votes": 6,
+            "timestamp": "2026-06-10T08:25:00Z",
+            "replies": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "content": "How do we handle timestamps dynamically? E.g., showing '2 minutes ago' instead of the raw ISO string.",
+    "votes": 9,
+    "timestamp": "2026-06-10T07:00:00Z",
+    "replies": [
+      {
+        "id": 31,
+        "content": "You can write a simple utility helper function that calculates the difference between `Date.now()` and the comment's timestamp.",
+        "votes": 8,
+        "timestamp": "2026-06-10T07:15:00Z",
+        "replies": [
+          {
+            "id": 32,
+            "content": "Be sure to set up a setInterval/timer if you want those relative times to update in real-time without manual page refreshes.",
+            "votes": 3,
+            "timestamp": "2026-06-10T07:30:00Z",
+            "replies": [
+              {
+                "id": 33,
+                "content": "Or use lightweight libraries like `date-fns` or `dayjs` to avoid handling tricky timezone edge cases manually.",
+                "votes": 5,
+                "timestamp": "2026-06-10T07:40:00Z",
+                "replies": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "content": "For the upvote/downvote feature, should the vote state be managed locally in the component or globally in the comments list?",
+    "votes": 11,
+    "timestamp": "2026-06-10T06:30:00Z",
+    "replies": [
+      {
+        "id": 35,
+        "content": "Globally is better because voting can affect sorting, and other components might need to know the updated vote count.",
+        "votes": 13,
+        "timestamp": "2026-06-10T06:45:00Z",
+        "replies": [
+          {
+            "id": 36,
+            "content": "Agreed. It also ensures data consistency if you display the same comment elsewhere on the page.",
+            "votes": 4,
+            "timestamp": "2026-06-10T07:00:00Z",
+            "replies": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "content": "Are there any security concerns like XSS when rendering user comments?",
+    "votes": 16,
+    "timestamp": "2026-06-10T05:00:00Z",
+    "replies": [
+      {
+        "id": 38,
+        "content": "Yes! Never use `dangerouslySetInnerHTML` in React or direct `innerHTML` in vanilla JS without sanitizing the input first.",
+        "votes": 20,
+        "timestamp": "2026-06-10T05:15:00Z",
+        "replies": [
+          {
+            "id": 39,
+            "content": "`DOMPurify` is a great library for sanitizing HTML inputs before rendering them.",
+            "votes": 12,
+            "timestamp": "2026-06-10T05:30:00Z",
+            "replies": []
+          }
+        ]
+      }
+    ]
+  }
+]

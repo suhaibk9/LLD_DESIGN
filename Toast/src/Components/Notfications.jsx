@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { CiCircleInfo } from "react-icons/ci";
 import { TiTick } from "react-icons/ti";
 import { BiSolidError } from "react-icons/bi";
@@ -20,11 +20,24 @@ const Notfications = ({
   animation = "slide",
 }) => {
   if (!message) return;
+  const toastRef = useRef(null);
+  useEffect(() => {
+    if (toastRef.current) toastRef.current.focus();
+  }, []);
   const iconCompoent = IconsFactory(type);
   return (
-    <div className={`notfications ${type} ${animationFactory[animation] || animation || "slideIn"}`}>
+    <div
+      ref={toastRef}
+      role="alert"
+      aria-live={
+        type === "error" || type === "warning" ? "assertive" : "polite"
+      }
+      tabIndex={-1}
+      className={`notfications ${type} ${animationFactory[animation] || animation || "slideIn"}`}
+    >
       {iconCompoent}
       {message}
+
       <button className="closeBtn" onClick={onClose}>
         <IoCloseOutline />
       </button>
