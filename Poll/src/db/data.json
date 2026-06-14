@@ -1,0 +1,410 @@
+{
+  "polls": [
+    {
+      "id": "1",
+      "question": "What is your favourite frontend framework?",
+      "totalCount": 4252,
+      "options": [
+        {
+          "id": 101,
+          "title": "React",
+          "votes": 1521
+        },
+        {
+          "id": 102,
+          "title": "Vue",
+          "votes": 889
+        },
+        {
+          "id": 103,
+          "title": "Angular",
+          "votes": 730
+        },
+        {
+          "id": 104,
+          "title": "Svelte",
+          "votes": 651
+        },
+        {
+          "id": 105,
+          "title": "Solid.js",
+          "votes": 461
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "question": "Which programming language do you use the most?",
+      "totalCount": 5120,
+      "options": [
+        {
+          "id": 201,
+          "title": "JavaScript",
+          "votes": 1850
+        },
+        {
+          "id": 202,
+          "title": "TypeScript",
+          "votes": 1430
+        },
+        {
+          "id": 203,
+          "title": "Python",
+          "votes": 1020
+        },
+        {
+          "id": 204,
+          "title": "Go",
+          "votes": 520
+        },
+        {
+          "id": 205,
+          "title": "Rust",
+          "votes": 300
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "question": "Which CSS methodology do you prefer?",
+      "totalCount": 2780,
+      "options": [
+        {
+          "id": 301,
+          "title": "Tailwind CSS",
+          "votes": 1120
+        },
+        {
+          "id": 302,
+          "title": "CSS Modules",
+          "votes": 680
+        },
+        {
+          "id": 303,
+          "title": "Styled Components",
+          "votes": 540
+        },
+        {
+          "id": 304,
+          "title": "Vanilla CSS",
+          "votes": 440
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "question": "Do you prefer dark mode or light mode?",
+      "totalCount": 6340,
+      "options": [
+        {
+          "id": 401,
+          "title": "Dark Mode",
+          "votes": 4510
+        },
+        {
+          "id": 402,
+          "title": "Light Mode",
+          "votes": 1830
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "question": "Which state management library do you use in React?",
+      "totalCount": 3670,
+      "options": [
+        {
+          "id": 501,
+          "title": "Redux Toolkit",
+          "votes": 1140
+        },
+        {
+          "id": 502,
+          "title": "Zustand",
+          "votes": 980
+        },
+        {
+          "id": 503,
+          "title": "React Context API",
+          "votes": 870
+        },
+        {
+          "id": 504,
+          "title": "Jotai",
+          "votes": 380
+        },
+        {
+          "id": 505,
+          "title": "MobX",
+          "votes": 300
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "question": "What database do you prefer for new projects?",
+      "totalCount": 4890,
+      "options": [
+        {
+          "id": 601,
+          "title": "PostgreSQL",
+          "votes": 1870
+        },
+        {
+          "id": 602,
+          "title": "MongoDB",
+          "votes": 1230
+        },
+        {
+          "id": 603,
+          "title": "MySQL",
+          "votes": 940
+        },
+        {
+          "id": 604,
+          "title": "Redis",
+          "votes": 510
+        },
+        {
+          "id": 605,
+          "title": "SQLite",
+          "votes": 340
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "question": "Which cloud provider do you use?",
+      "totalCount": 3950,
+      "options": [
+        {
+          "id": 701,
+          "title": "AWS",
+          "votes": 1680
+        },
+        {
+          "id": 702,
+          "title": "Google Cloud",
+          "votes": 920
+        },
+        {
+          "id": 703,
+          "title": "Azure",
+          "votes": 870
+        },
+        {
+          "id": 704,
+          "title": "Vercel / Netlify",
+          "votes": 480
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "question": "Tabs or Spaces for indentation?",
+      "totalCount": 7210,
+      "options": [
+        {
+          "id": 801,
+          "title": "Spaces",
+          "votes": 3890
+        },
+        {
+          "id": 802,
+          "title": "Tabs",
+          "votes": 3320
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "question": "Which testing framework do you prefer?",
+      "totalCount": 2560,
+      "options": [
+        {
+          "id": 901,
+          "title": "Jest",
+          "votes": 870
+        },
+        {
+          "id": 902,
+          "title": "Vitest",
+          "votes": 760
+        },
+        {
+          "id": 903,
+          "title": "Cypress",
+          "votes": 520
+        },
+        {
+          "id": 904,
+          "title": "Playwright",
+          "votes": 410
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "question": "What is your preferred package manager?",
+      "totalCount": 3140,
+      "options": [
+        {
+          "id": 1001,
+          "title": "npm",
+          "votes": 1120
+        },
+        {
+          "id": 1002,
+          "title": "pnpm",
+          "votes": 890
+        },
+        {
+          "id": 1003,
+          "title": "yarn",
+          "votes": 740
+        },
+        {
+          "id": 1004,
+          "title": "bun",
+          "votes": 390
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "question": "Which backend framework do you prefer?",
+      "totalCount": 4310,
+      "options": [
+        {
+          "id": 1101,
+          "title": "Express.js",
+          "votes": 1340
+        },
+        {
+          "id": 1102,
+          "title": "Next.js API Routes",
+          "votes": 1050
+        },
+        {
+          "id": 1103,
+          "title": "FastAPI (Python)",
+          "votes": 870
+        },
+        {
+          "id": 1104,
+          "title": "NestJS",
+          "votes": 620
+        },
+        {
+          "id": 1105,
+          "title": "Spring Boot",
+          "votes": 430
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "question": "How many monitors do you use for coding?",
+      "totalCount": 5640,
+      "options": [
+        {
+          "id": 1201,
+          "title": "1 Monitor",
+          "votes": 1870
+        },
+        {
+          "id": 1202,
+          "title": "2 Monitors",
+          "votes": 2540
+        },
+        {
+          "id": 1203,
+          "title": "3+ Monitors",
+          "votes": 1230
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "question": "Which code editor / IDE do you use?",
+      "totalCount": 6780,
+      "options": [
+        {
+          "id": 1301,
+          "title": "VS Code",
+          "votes": 3420
+        },
+        {
+          "id": 1302,
+          "title": "JetBrains (WebStorm / IntelliJ)",
+          "votes": 1560
+        },
+        {
+          "id": 1303,
+          "title": "Neovim",
+          "votes": 980
+        },
+        {
+          "id": 1304,
+          "title": "Cursor",
+          "votes": 820
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "question": "Which version control platform do you prefer?",
+      "totalCount": 4520,
+      "options": [
+        {
+          "id": 1401,
+          "title": "GitHub",
+          "votes": 2940
+        },
+        {
+          "id": 1402,
+          "title": "GitLab",
+          "votes": 1080
+        },
+        {
+          "id": 1403,
+          "title": "Bitbucket",
+          "votes": 500
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "question": "What is your preferred way to style React components?",
+      "totalCount": 3890,
+      "options": [
+        {
+          "id": 1501,
+          "title": "Tailwind CSS",
+          "votes": 1340
+        },
+        {
+          "id": 1502,
+          "title": "CSS Modules",
+          "votes": 890
+        },
+        {
+          "id": 1503,
+          "title": "Styled Components",
+          "votes": 670
+        },
+        {
+          "id": 1504,
+          "title": "Inline Styles",
+          "votes": 210
+        },
+        {
+          "id": 1505,
+          "title": "Sass / SCSS",
+          "votes": 780
+        }
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
